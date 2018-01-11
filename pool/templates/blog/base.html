@@ -17,17 +17,42 @@
 	<body>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-2">
+				<div class="col-sm-2 col-xs-12">
 				{% block sidebar %}
-				<ul class="sidebar-nav">
-					<li><a href="{% url 'index' %}">Home</a></li>
-					<li><a href="">Enter Picks</a></li>
-					<li><a href="">See All Picks</a></li>
-					<li><a href="">Pool Standings</a></li>
-				</ul>
+				<div class="sidebar-nav">
+				
+					<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					  
+					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					  </button>
+
+					  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="flex-column navbar-nav mr-auto">
+						  <li class="nav-item active">
+							<a class="nav-link" href="#">Welcome Page</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="#">Enter Picks</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="#">View All Picks</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="#">Pool Standings</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link" href="#">Contact Admin</a>
+						  </li>
+						</ul>
+						
+					  </div>
+					</nav>				
+					
+				</div>
 			 {% endblock %}
 			  </div>
-			  <div class="col-sm-10 ">
+			  <div class="col-sm-10 col-xs-12">
 			  {% block content %}{% endblock %}
 			  </div>
 			</div>
