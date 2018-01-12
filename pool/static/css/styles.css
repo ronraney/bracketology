@@ -2,16 +2,54 @@ html {
 	min-height: 100%;
 }
 
-
-
 a {
 	color: #222;
 }
+form {
+	margin: 20px auto;
+	padding: 15px;
+	border: 1px #bbb groove;
+}
+form label {
+	margin: 5px;
+}
+form input {
+	margin: 5px;
+	display: block;
+}
+/*Bootstrap Mods*/
+.alert {
+	margin-top: 20px;
+}
 
+.display-4 {
+		font-size: 3em;
+	}
+/*Home Page*/
+
+.jumbotron {
+	margin-top: 20px;
+}
 /*Media Queries*/
 
-
-@media (min-width: 576px) {  }
+.card-text .btn {
+	font-size: 1.7em;
+}
+@media (min-width: 576px) { 
+.sidebar-nav {
+		margin-top: 20px;
+		padding: 0;
+		list-style: none;
+		font-size: .6em;
+		border: 1px solid #666;
+	}
+	.jumbotron {
+		padding: 1rem 1rem;
+	}
+	.display-4 {
+		font-size: 4em;
+	}	
+ }
 
 
 @media (min-width: 768px) { 
@@ -22,6 +60,9 @@ a {
 		font-size: 1em;
 		height: calc(100vh - 4rem);
 		border: 1px solid #666;
+	}
+	.display-4 {
+		font-size: 4em;
 	}
  }
 
@@ -35,6 +76,9 @@ a {
 		height: calc(100vh - 4rem);
 		border: 1px solid #666;
 	}
+	.display-4 {
+		font-size: 4em;
+	}
 }
 
 
@@ -43,9 +87,12 @@ a {
     margin-top: 20px;
     padding: 0;
     list-style: none;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	height: calc(100vh - 4rem);
 	border: 1px solid #666;
 }
+.display-4 {
+		font-size: 4em;
+	}
 	
 }

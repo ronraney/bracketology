@@ -1,9 +1,11 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
-
+<div class="fluid-container">
 {% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
+<div class="alert alert-info">
+	<p>Your username and password didn't match. Please try again.</p>
+</div>
 {% endif %}
 
 {% if next %}
@@ -17,23 +19,24 @@
 
 <form method="post" action="{% url 'login' %}">
 {% csrf_token %}
-
-<div>
-  <td>{{ form.username.label_tag }}</td>
-  <td>{{ form.username }}</td>
+<div class="form-group">
+	<div>
+	  <td>{{ form.username.label_tag }}</td>
+	  <td>{{ form.username }}</td>
+	</div>
+	<div>
+	  <td>{{ form.password.label_tag }}</td>
+	  <td>{{ form.password }}</td>
+	</div>
 </div>
-<div>
-  <td>{{ form.password.label_tag }}</td>
-  <td>{{ form.password }}</td>
-</div>
 
-<div>
+<div class="form-group">
   <input type="submit" value="login" />
   <input type="hidden" name="next" value="{{ next }}" />
 </div>
+
 </form>
 
 {# Assumes you setup the password_reset view in your URLconf #}
-<p><a href="{% url 'password_reset' %}">Lost password?</a></p>
-
+<a type="button" class="btn btn-light" href="{% url 'password_reset' %}">Lost password?</a>
 {% endblock %}
