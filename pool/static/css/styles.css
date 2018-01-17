@@ -5,6 +5,10 @@ html {
 a {
 	color: #222;
 }
+.sidebar-nav {
+	margin-top: 20px;
+}
+/*Forms*/
 form {
 	margin: 20px auto;
 	padding: 15px;
